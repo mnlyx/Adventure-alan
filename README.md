@@ -4,11 +4,7 @@
 Projeto feito em aula, curso 3MIL TALENTOS TI @AlanSchug!
 
 
-## GRAVIDADE
+## Licença
 
-Para mudar a gravidade do mundo basta trocar o valor da variavel grav_mundo!
-
-```js
-  grav_mundo = 10 //Recomendado!
-```
+[MIT](https://choosealicense.com/licenses/mit/)
 
