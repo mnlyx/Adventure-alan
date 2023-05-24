@@ -1,7 +1,7 @@
 
 # ADVENTURE 
 
-Projeto feito em aula, curso 3MIL TALENTOS TI @AlanSchug!
+Projeto feito em aula.
 
 
 ## Licença
