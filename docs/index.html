@@ -1,16 +1,101 @@
+<!DOCTYPE html>
 <html>
-    <h1>Bem-vindo ao nosso site!</h1>
-    <h2>Descubra os melhores produtos para você</h2>
-    <p>Seja bem-vindo ao nosso site! Aqui você encontrará uma seleção incrível de produtos de alta qualidade para atender às suas necessidades. Explore nosso catálogo e aproveite as nossas ofertas especiais!</p>
-    <p>Conheça o nosso mais recente lançamento: o Produto X! Com recursos inovadores e design elegante, o Produto X é perfeito para quem busca qualidade e estilo. Aproveite agora mesmo essa oferta exclusiva e garanta o seu!</p>
-    <h3>Confiraa nossos destaques da semana:</h3>
-    <ul>
-        <li>Recurso 1</li>
-        <li>Recurso 2</li>
-        <li>Recurso 3</li>
-      </ul>
-      <img src="img/alan.png">
-      <p style="color: red; font-weight: bold;">Não perca nossa promoção especial! Descontos de até 50% em todos os produtos da loja. Aproveite enquanto durar o estoque!</p>
-      
+<head>
+  <meta charset="UTF-8">
+  <title>O INÍCIO</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black;
+    }
 
+    h1 {
+      font-size: 48px;
+      color: #ff0000;
+      animation: colorAnimation 5s infinite;
+    }
+
+    @keyframes colorAnimation {
+      0% {
+        color: #ff0000;
+      }
+      50% {
+        color: #00ff00;
+      }
+      100% {
+        color: #0000ff;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      animation: shakeAnimation 0.5s infinite;
+    }
+
+    @keyframes shakeAnimation {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-10px);
+      }
+      50% {
+        transform: translateX(10px);
+      }
+      75% {
+        transform: translateX(-10px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">O INÍCIO</h1>
+    <button id="button">MISTERIOSO</button>
+    <div id="countdown"></div>
+  </div>
+
+  <script>
+    const titleElement = document.getElementById('title');
+    const button = document.getElementById('button');
+    const countdownElement = document.getElementById('countdown');
+
+    button.addEventListener('click', () => {
+      titleElement.style.display = 'none';
+      countdownElement.style.display = 'block';
+
+      let count = 3;
+      countdownElement.textContent = count;
+
+      const countdown = setInterval(() => {
+        count--;
+        countdownElement.textContent = count;
+
+        if (count === 0) {
+          clearInterval(countdown);
+          window.location.href = 'castelo.html';
+        }
+      }, 1000);
+    });
+  </script>
+</body>
 </html>
