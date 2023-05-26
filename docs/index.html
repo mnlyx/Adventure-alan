@@ -1,101 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>O INÍCIO</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: black;
-    }
+    <title>Página com fundo preto</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
 
-    h1 {
-      font-size: 48px;
-      color: #ff0000;
-      animation: colorAnimation 5s infinite;
-    }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-    @keyframes colorAnimation {
-      0% {
-        color: #ff0000;
-      }
-      50% {
-        color: #00ff00;
-      }
-      100% {
-        color: #0000ff;
-      }
-    }
+        img {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px 0;
+        }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .text {
+            text-align: left;
+        }
 
-    button {
-      font-size: 24px;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      animation: shakeAnimation 0.5s infinite;
-    }
-
-    @keyframes shakeAnimation {
-      0% {
-        transform: translateX(0);
-      }
-      25% {
-        transform: translateX(-10px);
-      }
-      50% {
-        transform: translateX(10px);
-      }
-      75% {
-        transform: translateX(-10px);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-  </style>
+        .button {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1 id="title">O INÍCIO</h1>
-    <button id="button">MISTERIOSO</button>
-    <div id="countdown"></div>
-  </div>
-
-  <script>
-    const titleElement = document.getElementById('title');
-    const button = document.getElementById('button');
-    const countdownElement = document.getElementById('countdown');
-
-    button.addEventListener('click', () => {
-      titleElement.style.display = 'none';
-      countdownElement.style.display = 'block';
-
-      let count = 3;
-      countdownElement.textContent = count;
-
-      const countdown = setInterval(() => {
-        count--;
-        countdownElement.textContent = count;
-
-        if (count === 0) {
-          clearInterval(countdown);
-          window.location.href = 'castelo.html';
-        }
-      }, 1000);
-    });
-  </script>
+    <div class="container">
+        <img src="casa.png" alt="Foto de casa">
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut enim libero, et vulputate massa. Sed volutpat odio eget metus vulputate commodo. Nam sit amet urna enim, eu volutpat elit. Sed cursus libero vitae lacus scelerisque quis tincidunt ipsum tristique. In hac habitasse platea dictumst.</p>
+            <p>Nullam elementum, mauris a gravida consectetur, neque mauris semper nunc, id eleifend erat libero ut eros. Nam iaculis tortor in leo venenatis consequat. Sed iaculis, lacus sed pharetra vulputate, dolor nulla feugiat mi, a volutpat lorem odio eget justo. Integer id lacinia sem. Suspendisse et lorem vitae ante feugiat lobortis. Fusce tincidunt, justo a rutrum aliquam, odio ipsum viverra sem, vitae dignissim metus lectus auctor ante.</p>
+            <p>Pellentesque eleifend condimentum enim, id bibendum eros fringilla vitae. Integer gravida gravida pulvinar. Sed id mi eget risus hendrerit ullamcorper nec in felis. Cras ullamcorper eleifend enim, ac dictum libero aliquam at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam eget arcu mauris. Nam sit amet ante a erat pretium commodo.</p>
+            <p>Vivamus pharetra, sem eget vulputate consequat, justo elit tristique massa, in convallis sapien tortor non lacus. Proin ullamcorper erat nec lectus cursus feugiat. Sed condimentum ipsum ac leo bibendum vehicula. Sed tristique purus id tellus iaculis nec tincidunt ligula hendrerit. Aliquam lobortis convallis vulputate. Praesent sed aliquet tellus.</p>
+            <p>Nunc condimentum leo quis mauris iaculis congue. In hac habitasse platea dictumst. Sed luctus mi vitae ligula tincidunt faucibus. Nullam ultricies velit a ligula eleifend vitae semper neque eleifend. Integer ut lorem vel lorem scelerisque consequat. Fusce sit amet nunc ut lectus tincidunt tristique in at lacus. Etiam in felis ac felis hendrerit tempor in at tortor.</p>
+        </div>
+        <a href="outra_pagina.html" class="button">Ir para outra página</a>
+    </div>
 </body>
 </html>
