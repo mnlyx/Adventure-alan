@@ -66,8 +66,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script>
         function setup() {
-            noCanvas();
-
             const button = select('.button');
 
             button.mouseOver(function() {
@@ -84,6 +82,7 @@
             const opacity = map(sin(frameCount * 0.05), -1, 1, 0.2, 0.5);
             overlay.style('opacity', opacity);
         }
+        new p5();
     </script>
 </body>
 </html>
